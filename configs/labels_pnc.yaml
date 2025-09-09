@@ -1,0 +1,13 @@
+# Mapping from PNC classes to unified classes and risk scores
+# Update based on 'Proposed Numerical Classification (PNC) for Medical Consultation.md'
+
+classes:
+  Normal:
+    unified: Normal
+    risk: 0
+  AtRisk:
+    unified: At-Risk
+    risk: 50
+  Critical:
+    unified: Critical
+    risk: 90
