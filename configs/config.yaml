@@ -5,7 +5,8 @@ project:
   seed: 42
 
 paths:
-  raw_data_dir: "dataset/archive/PTB diagnostic ecg database csv files"
+  ptb_data_dir: "dataset/archive/PTB diagnostic ecg database csv files"
+  mitbih_data_dir: "dataset/mit-bih-arrhythmia-database-1.0.0"
   processed_dir: data/processed
   cache_dir: .cache
 
@@ -34,11 +35,15 @@ model:
 
 # Data loading
 loader:
-  dataset: csv
-  timestamp_column: time
-  value_column: value
-  sampling_rate_hz: 360
-  file_glob: "**/*.csv"
+  datasets: ["ptb", "mitbih"]  # Use both databases
+  ptb:
+    timestamp_column: null  # No time column, will generate from sampling rate
+    value_column: ii  # Use lead II as primary signal
+    sampling_rate_hz: 1000
+    file_glob: "**/*.csv"
+  mitbih:
+    sampling_rate_hz: 360
+    # MIT-BIH uses binary format, will need special loader
 
 # Label mapping (external YAML)
 labels:

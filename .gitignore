@@ -89,3 +89,6 @@ models/
 
 # Node
 node_modules/
+
+# Task tracking (personal notes)
+tasks.md
