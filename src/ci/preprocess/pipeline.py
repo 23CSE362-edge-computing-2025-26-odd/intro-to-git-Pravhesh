@@ -6,6 +6,8 @@ from .spectrogram import SpectrogramGenerator, SpectrogramConfig
 
 class PreprocessingPipeline:
     def __init__(self, window_config: WindowConfig, spec_config: SpectrogramConfig):
+        self.window_config = window_config
+        self.spec_config = spec_config
         self.window_generator = SlidingWindowGenerator(window_config)
         self.spec_generator = SpectrogramGenerator(spec_config)
         
