@@ -1,8 +1,8 @@
-# CI Medical Diagnosis Project
+# CI Project
 
 A hybrid Computational Intelligence system for cardiac condition diagnosis using ResNet18 + Fuzzy Logic + Swarm Optimization, optimized for edge deployment.
 
-## 🎯 Overview
+## Overview
 
 This project implements a complete pipeline for ECG signal analysis and cardiac diagnosis:
 - **Signal Processing**: Sliding window + STFT/Mel spectrogram preprocessing
@@ -11,7 +11,7 @@ This project implements a complete pipeline for ECG signal analysis and cardiac 
 - **Edge Deployment**: ONNX export with INT8 quantization for resource-constrained devices
 - **Runtime System**: Production-ready CLI with comprehensive benchmarking
 
-## 📊 Performance Results
+## Performance Results
 
 | Configuration | Latency | Throughput | Model Size | Compression |
 |---------------|---------|------------|------------|-------------|
@@ -20,7 +20,7 @@ This project implements a complete pipeline for ECG signal analysis and cardiac 
 | ONNX INT8 | - | - | 10.95MB | **3.98x** |
 | + Fuzzy Logic | +4.9ms | - | - | 3.6% overhead |
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 
@@ -46,7 +46,7 @@ python scripts/runtime_cli.py --onnx demo_outputs/ecg_model.onnx --input sample_
 python scripts/benchmark_runtime.py
 ```
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 CI/
@@ -70,7 +70,7 @@ CI/
 └── docs/                   # Documentation
 ```
 
-## 🔧 Setup & Installation
+## Setup & Installation
 
 ### 1. Environment Setup
 
@@ -111,7 +111,7 @@ python -m pytest tests/test_model.py -v
 python -m pytest tests/test_fuzzy.py -v
 ```
 
-## 🧠 Training & Evaluation
+## Training & Evaluation
 
 ### Feature Extraction
 
@@ -130,7 +130,7 @@ python scripts/evaluate_linear_probe.py
 python scripts/optimize_fuzzy_parameters.py
 ```
 
-## 🚀 Edge Deployment
+## Edge Deployment
 
 ### ONNX Export & Quantization
 
@@ -162,7 +162,7 @@ python scripts/runtime_cli.py --onnx demo_outputs/ecg_model.onnx --input ecg_fil
 python scripts/runtime_cli.py --input ecg_file.csv --fuzzy --benchmark
 ```
 
-## 🌐 Fog Computing Simulation
+## Log Computing Simulation
 
 ### Generate iFogSim Configuration
 
@@ -210,7 +210,7 @@ Fuzzy Logic Overhead: +4.9ms (3.6%)
 ONNX Speedup: 1.00x faster than PyTorch
 ```
 
-## 🏗️ Architecture
+## Architecture
 
 ### Signal Processing Pipeline
 
@@ -244,7 +244,7 @@ ECG Sensor → Edge Gateway → Fog Node → Cloud Server
 Collection   Spectrogram   Deep+Fuzzy   Long-term
 ```
 
-## 🔍 Model Details
+## Model Details
 
 ### ResNet18 Feature Extractor
 
@@ -263,7 +263,7 @@ Collection   Spectrogram   Deep+Fuzzy   Long-term
 - **Rules**: Expert knowledge encoded as if-then rules
 - **Optimization**: PSO-tuned membership functions
 
-## 📈 Validation Results
+## Validation Results
 
 ### Core Pipeline Tests
 - ✅ **Data Loading**: PTB (549 files) + MIT-BIH (48 records)
@@ -315,7 +315,7 @@ for signal_file in signal_files:
     print(f"Diagnosis: {result['prediction']}")
 ```
 
-## 🔧 Configuration
+## Configuration
 
 ### Model Configuration (`configs/config.yaml`)
 
@@ -351,7 +351,7 @@ labels:
   4: "Other"
 ```
 
-## 🚨 Troubleshooting
+## Troubleshooting
 
 ### Common Issues
 
@@ -381,39 +381,3 @@ python scripts/runtime_cli.py --input data.csv --verbose
 # Run with debugging
 PYTHONPATH=src python -m pdb scripts/runtime_cli.py --input data.csv
 ```
-
-## 📚 Citation
-
-If you use this work in your research, please cite:
-
-```bibtex
-@software{ci_medical_diagnosis,
-  title={Hybrid CI System for Cardiac Diagnosis},
-  author={[Author Name]},
-  year={2025},
-  url={[Repository URL]}
-}
-```
-
-## 📄 License
-
-MIT License - see [LICENSE](LICENSE) for details.
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit changes (`git commit -m 'Add amazing feature'`)
-4. Push to branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## 📞 Support
-
-For questions and support:
-- 📧 Email: [contact@email.com]
-- 🐛 Issues: [GitHub Issues](repository-url/issues)
-- 📖 Documentation: [Wiki](repository-url/wiki)
-
----
-
-**Built with ❤️ for advancing medical AI at the edge**
