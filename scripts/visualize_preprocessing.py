@@ -1,9 +1,16 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
-from ci.preprocess.windowing import SlidingWindowGenerator, WindowConfig
-from ci.preprocess.spectrogram import SpectrogramGenerator, SpectrogramConfig
-from ci.preprocess.pipeline import PreprocessingPipeline
+import sys
+from pathlib import Path
+
+# Add project root to path
+PROJECT_ROOT = Path(__file__).parent.parent
+sys.path.insert(0, str(PROJECT_ROOT))
+
+from src.ci.preprocess.windowing import SlidingWindowGenerator, WindowConfig
+from src.ci.preprocess.spectrogram import SpectrogramGenerator, SpectrogramConfig
+from src.ci.preprocess.pipeline import PreprocessingPipeline
 
 
 def create_sample_ecg_signal(duration_seconds=10, sampling_rate=360):

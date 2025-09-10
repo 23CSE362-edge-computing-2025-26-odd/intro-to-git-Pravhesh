@@ -26,8 +26,7 @@ import numpy as np
 PROJECT_ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(PROJECT_ROOT))
 
-from src.ci.model import create_classifier, create_feature_extractor
-from src.ci.model.model import save_model_checkpoint, get_model_summary
+from src.ci.model.model import create_classifier, create_feature_extractor, save_model_checkpoint, get_model_summary
 from src.ci.preprocess import PreprocessingPipeline
 
 

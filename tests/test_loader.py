@@ -5,7 +5,7 @@ import yaml
 import pandas as pd
 import pytest
 
-from ci.data.loader import build_loader_from_yaml
+from src.ci.data.loader import build_loader_from_yaml
 
 
 def make_temp_env(tmpdir):

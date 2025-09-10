@@ -1,8 +1,8 @@
 import numpy as np
 import pytest
-from ci.preprocess.windowing import SlidingWindowGenerator, WindowConfig
-from ci.preprocess.spectrogram import SpectrogramGenerator, SpectrogramConfig
-from ci.preprocess.pipeline import PreprocessingPipeline
+from src.ci.preprocess.windowing import SlidingWindowGenerator, WindowConfig
+from src.ci.preprocess.spectrogram import SpectrogramGenerator, SpectrogramConfig
+from src.ci.preprocess.pipeline import PreprocessingPipeline
 
 
 def test_windowing_basic():
