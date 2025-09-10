@@ -4,7 +4,7 @@ Hybrid model that combines ResNet18 embeddings with the fuzzy decision engine.
 This is a minimal implementation to satisfy imports and allow integration tests.
 """
 
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from typing import Optional, Dict, Any
 import numpy as np
 
@@ -14,7 +14,7 @@ from .engine import FuzzyDecisionEngine, FuzzyConfig, DiagnosisResult
 @dataclass
 class HybridConfig:
     """Configuration for the hybrid ECG model."""
-    fuzzy: FuzzyConfig = FuzzyConfig()
+    fuzzy: FuzzyConfig = field(default_factory=FuzzyConfig)
 
 
 class HybridECGModel:
