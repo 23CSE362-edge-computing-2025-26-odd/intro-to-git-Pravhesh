@@ -1,0 +1,7 @@
+Stage,Latency_ms,MIPS_Requirement
+preprocessing_ms,20.0,20000
+pytorch_inference_ms,136.854088306427,136854
+onnx_inference_ms,137.4477982521057,137447
+fuzzy_logic_ms,4.9,4900
+total_pytorch_ms,141.78316593170166,141783
+total_onnx_ms,146.51554822921753,146515

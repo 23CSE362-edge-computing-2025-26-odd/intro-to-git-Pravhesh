@@ -1,0 +1,15 @@
+edge_deployment:
+  enable_fuzzy: true
+  fallback_model: float32
+  max_latency_ms: 500
+  max_memory_mb: 2048
+  model_format: onnx
+  preferred_model: int8
+monitoring:
+  health_check_interval: 60
+  log_level: INFO
+  metrics_enabled: true
+runtime:
+  batch_size: 1
+  device: cpu
+  num_threads: 2

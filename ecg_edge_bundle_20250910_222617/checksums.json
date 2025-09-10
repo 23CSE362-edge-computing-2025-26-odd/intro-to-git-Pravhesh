@@ -1,0 +1,22 @@
+{
+  "models/ecg_model_float32.onnx": {
+    "sha256": "bcbb36d3f7199439e54f5f2d81afb4e9d8a04779af883905b4a186c149138f7a",
+    "size_bytes": 45708518
+  },
+  "models/ecg_model_int8.onnx": {
+    "sha256": "3a4a84f905ef740e358ec120fb174e0f9a86a997eb565e88ee2d0e1c78a9e681",
+    "size_bytes": 11478406
+  },
+  "edge_launcher.py": {
+    "sha256": "609a853b0773b343628baa2869735cc575855d971c187395210e269ad71016f0",
+    "size_bytes": 4797
+  },
+  "configs/config.yaml": {
+    "sha256": "76b3ffc83d52c8f2679bcc254eb73c339e7aef7430484227ca80084f015336b0",
+    "size_bytes": 1220
+  },
+  "configs/labels_pnc.yaml": {
+    "sha256": "42a544639a6ab165d63f98fd3a035d102b6588e4ab8ae25f5f135c339c5227b0",
+    "size_bytes": 306
+  }
+}

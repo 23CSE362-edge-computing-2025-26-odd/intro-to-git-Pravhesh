@@ -1,0 +1,5 @@
+Device,MIPS,RAM_MB,Uplink_Mbps,Downlink_Mbps,Cost_Per_MIPS,Busy_Power_W,Idle_Power_W
+ECG_Sensor,100,64,1.0,1.0,0.0,2.0,0.5
+Edge_Gateway,2000,2048,10.0,10.0,0.01,15.0,3.0
+Fog_Node,10000,8192,100.0,100.0,0.02,200.0,50.0
+Cloud_Server,50000,32768,1000.0,1000.0,0.05,500.0,100.0

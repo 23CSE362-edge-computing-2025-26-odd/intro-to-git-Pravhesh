@@ -1,0 +1,242 @@
+{
+  "simulation_config": "SimulationConfig(simulation_duration_minutes=60, ecg_arrival_rate_per_minute=6, network_reliability=0.99, enable_failover=True, cost_analysis=True)",
+  "scenarios": {
+    "all_edge": {
+      "scenario": "all_edge",
+      "description": "All processing on edge gateway",
+      "model_type": "onnx",
+      "metrics": {
+        "end_to_end_latency_ms": 183.68354822921754,
+        "bandwidth_usage_kb_per_request": 21.0,
+        "cost_per_hour_usd": 0.02,
+        "power_consumption_watts": 3.703718657875061,
+        "accuracy_factor": 1.04895,
+        "availability": 0.9801,
+        "throughput_requests_per_minute": 6
+      },
+      "device_utilization": {
+        "sensor": {
+          "cpu_time_ms": 10.0,
+          "peak_memory_mb": 32,
+          "cost_per_hour": 0.0,
+          "power_idle_watts": 0.5,
+          "power_busy_watts": 2.0,
+          "cpu_utilization": 0.001,
+          "power_watts": 0.5015
+        },
+        "edge_gateway": {
+          "cpu_time_ms": 168.51554822921753,
+          "peak_memory_mb": 256,
+          "cost_per_hour": 0.02,
+          "power_idle_watts": 3.0,
+          "power_busy_watts": 15.0,
+          "cpu_utilization": 0.016851554822921753,
+          "power_watts": 3.202218657875061
+        }
+      },
+      "resource_violations": [],
+      "feasible": true
+    },
+    "edge_fog_hybrid": {
+      "scenario": "edge_fog_hybrid",
+      "description": "Preprocessing at edge, inference at fog",
+      "model_type": "pytorch",
+      "metrics": {
+        "end_to_end_latency_ms": 143.6596995708847,
+        "bandwidth_usage_kb_per_request": 35.5,
+        "cost_per_hour_usd": 0.16999999999999998,
+        "power_consumption_watts": 54.07510689356327,
+        "accuracy_factor": 1.05,
+        "availability": 0.970299,
+        "throughput_requests_per_minute": 6
+      },
+      "device_utilization": {
+        "sensor": {
+          "cpu_time_ms": 10.0,
+          "peak_memory_mb": 32,
+          "cost_per_hour": 0.0,
+          "power_idle_watts": 0.5,
+          "power_busy_watts": 2.0,
+          "cpu_utilization": 0.001,
+          "power_watts": 0.5015
+        },
+        "edge_gateway": {
+          "cpu_time_ms": 22.0,
+          "peak_memory_mb": 256,
+          "cost_per_hour": 0.02,
+          "power_idle_watts": 3.0,
+          "power_busy_watts": 15.0,
+          "cpu_utilization": 0.0022,
+          "power_watts": 3.0264
+        },
+        "fog_node": {
+          "cpu_time_ms": 36.480459570884705,
+          "peak_memory_mb": 512,
+          "cost_per_hour": 0.15,
+          "power_idle_watts": 50.0,
+          "power_busy_watts": 200.0,
+          "cpu_utilization": 0.0036480459570884705,
+          "power_watts": 50.54720689356327
+        }
+      },
+      "resource_violations": [],
+      "feasible": true
+    },
+    "fog_only": {
+      "scenario": "fog_only",
+      "description": "All processing at fog node",
+      "model_type": "pytorch",
+      "metrics": {
+        "end_to_end_latency_ms": 57.148459570884704,
+        "bandwidth_usage_kb_per_request": 21.0,
+        "cost_per_hour_usd": 0.15,
+        "power_consumption_watts": 51.13120689356327,
+        "accuracy_factor": 1.05,
+        "availability": 0.9801,
+        "throughput_requests_per_minute": 6
+      },
+      "device_utilization": {
+        "sensor": {
+          "cpu_time_ms": 10.0,
+          "peak_memory_mb": 32,
+          "cost_per_hour": 0.0,
+          "power_idle_watts": 0.5,
+          "power_busy_watts": 2.0,
+          "cpu_utilization": 0.001,
+          "power_watts": 0.5015
+        },
+        "fog_node": {
+          "cpu_time_ms": 41.980459570884705,
+          "peak_memory_mb": 512,
+          "cost_per_hour": 0.15,
+          "power_idle_watts": 50.0,
+          "power_busy_watts": 200.0,
+          "cpu_utilization": 0.00419804595708847,
+          "power_watts": 50.62970689356327
+        }
+      },
+      "resource_violations": [],
+      "feasible": true
+    },
+    "cloud_only": {
+      "scenario": "cloud_only",
+      "description": "All processing in cloud",
+      "model_type": "pytorch",
+      "metrics": {
+        "end_to_end_latency_ms": 57.148459570884704,
+        "bandwidth_usage_kb_per_request": 21.0,
+        "cost_per_hour_usd": 0.5,
+        "power_consumption_watts": 102.18071838283538,
+        "accuracy_factor": 1.05,
+        "availability": 0.9801,
+        "throughput_requests_per_minute": 6
+      },
+      "device_utilization": {
+        "sensor": {
+          "cpu_time_ms": 10.0,
+          "peak_memory_mb": 32,
+          "cost_per_hour": 0.0,
+          "power_idle_watts": 0.5,
+          "power_busy_watts": 2.0,
+          "cpu_utilization": 0.001,
+          "power_watts": 0.5015
+        },
+        "cloud_server": {
+          "cpu_time_ms": 41.980459570884705,
+          "peak_memory_mb": 512,
+          "cost_per_hour": 0.5,
+          "power_idle_watts": 100.0,
+          "power_busy_watts": 500.0,
+          "cpu_utilization": 0.00419804595708847,
+          "power_watts": 101.67921838283539
+        }
+      },
+      "resource_violations": [],
+      "feasible": true
+    },
+    "intelligent_hybrid": {
+      "scenario": "intelligent_hybrid",
+      "description": "Optimal task placement",
+      "model_type": "onnx",
+      "metrics": {
+        "end_to_end_latency_ms": 150.60905954013825,
+        "bandwidth_usage_kb_per_request": 37.0,
+        "cost_per_hour_usd": 0.16999999999999998,
+        "power_consumption_watts": 54.05421054341793,
+        "accuracy_factor": 1.04895,
+        "availability": 0.970299,
+        "throughput_requests_per_minute": 6
+      },
+      "device_utilization": {
+        "sensor": {
+          "cpu_time_ms": 10.0,
+          "peak_memory_mb": 32,
+          "cost_per_hour": 0.0,
+          "power_idle_watts": 0.5,
+          "power_busy_watts": 2.0,
+          "cpu_utilization": 0.001,
+          "power_watts": 0.5015
+        },
+        "edge_gateway": {
+          "cpu_time_ms": 31.067749977111816,
+          "peak_memory_mb": 256,
+          "cost_per_hour": 0.02,
+          "power_idle_watts": 3.0,
+          "power_busy_watts": 15.0,
+          "cpu_utilization": 0.0031067749977111815,
+          "power_watts": 3.037281299972534
+        },
+        "fog_node": {
+          "cpu_time_ms": 34.36194956302643,
+          "peak_memory_mb": 256,
+          "cost_per_hour": 0.15,
+          "power_idle_watts": 50.0,
+          "power_busy_watts": 200.0,
+          "cpu_utilization": 0.003436194956302643,
+          "power_watts": 50.515429243445396
+        }
+      },
+      "resource_violations": [],
+      "feasible": true
+    }
+  },
+  "analysis": {
+    "best_scenarios": {
+      "latency": {
+        "name": "fog_only",
+        "value": 57.148459570884704
+      },
+      "cost": {
+        "name": "all_edge",
+        "value": 0.02
+      },
+      "power": {
+        "name": "all_edge",
+        "value": 3.703718657875061
+      },
+      "accuracy": {
+        "name": "edge_fog_hybrid",
+        "value": 1.05
+      },
+      "overall": {
+        "name": "all_edge",
+        "score": 22.682531478533257
+      }
+    },
+    "recommendations": [
+      "For ultra-low latency (< 100ms): Use 'fog_only' scenario",
+      "For cost optimization: Use 'all_edge' scenario",
+      "For power efficiency: Use 'all_edge' scenario",
+      "Overall best balance: 'all_edge' scenario"
+    ],
+    "feasible_scenarios": [
+      "all_edge",
+      "edge_fog_hybrid",
+      "fog_only",
+      "cloud_only",
+      "intelligent_hybrid"
+    ],
+    "infeasible_scenarios": []
+  },
+  "timestamp": 1757523310.3802412
+}

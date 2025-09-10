@@ -1,0 +1,40 @@
+{
+  "bundle_name": "ecg_edge_bundle",
+  "version": "20250910_222617",
+  "created": "2025-09-10T22:26:27.030488",
+  "description": "ECG Diagnosis Edge Deployment Bundle",
+  "components": {
+    "models": [
+      "Float32 ONNX",
+      "INT8 ONNX"
+    ],
+    "runtime": [
+      "CLI interface",
+      "Python modules"
+    ],
+    "configs": [
+      "Model config",
+      "Label mapping",
+      "Edge config"
+    ],
+    "examples": [
+      "Sample data",
+      "Usage scripts"
+    ],
+    "docs": [
+      "Deployment guide",
+      "API reference"
+    ]
+  },
+  "requirements": {
+    "python": "3.8+",
+    "memory_min_mb": 512,
+    "memory_rec_mb": 2048,
+    "storage_mb": 100
+  },
+  "performance": {
+    "latency_ms": 137,
+    "throughput_samples_sec": 78575,
+    "model_compression_ratio": 3.98
+  }
+}

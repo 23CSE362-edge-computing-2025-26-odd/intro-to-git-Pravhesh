@@ -1,0 +1,42 @@
+[
+  {
+    "name": "ECG_Sensor",
+    "mips": 100,
+    "ram": 64,
+    "uplink_bandwidth": 1.0,
+    "downlink_bandwidth": 1.0,
+    "rate_per_mips": 0.0,
+    "busy_power": 2.0,
+    "idle_power": 0.5
+  },
+  {
+    "name": "Edge_Gateway",
+    "mips": 2000,
+    "ram": 2048,
+    "uplink_bandwidth": 10.0,
+    "downlink_bandwidth": 10.0,
+    "rate_per_mips": 0.01,
+    "busy_power": 15.0,
+    "idle_power": 3.0
+  },
+  {
+    "name": "Fog_Node",
+    "mips": 10000,
+    "ram": 8192,
+    "uplink_bandwidth": 100.0,
+    "downlink_bandwidth": 100.0,
+    "rate_per_mips": 0.02,
+    "busy_power": 200.0,
+    "idle_power": 50.0
+  },
+  {
+    "name": "Cloud_Server",
+    "mips": 50000,
+    "ram": 32768,
+    "uplink_bandwidth": 1000.0,
+    "downlink_bandwidth": 1000.0,
+    "rate_per_mips": 0.05,
+    "busy_power": 500.0,
+    "idle_power": 100.0
+  }
+]

@@ -1,0 +1,18 @@
+{
+  "arrival_rate_per_minute": 6,
+  "signal_characteristics": {
+    "raw_signal_size_kb": 21.09375,
+    "spectrogram_size_kb": 14.25,
+    "features_size_kb": 2.0,
+    "diagnosis_size_kb": 0.5
+  },
+  "processing_requirements": {
+    "preprocessing_ms": 20.0,
+    "pytorch_inference_ms": 136.854088306427,
+    "onnx_inference_ms": 137.4477982521057,
+    "fuzzy_logic_ms": 4.9,
+    "total_pytorch_ms": 141.78316593170166,
+    "total_onnx_ms": 146.51554822921753
+  },
+  "simulation_duration_minutes": 60
+}

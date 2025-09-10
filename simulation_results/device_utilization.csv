@@ -1,0 +1,13 @@
+Scenario,Device,CPU Utilization (%),Memory (MB),Power (W),Cost ($/hour)
+all_edge,sensor,0.1,32,0.5,0.000
+all_edge,edge_gateway,1.7,256,3.2,0.020
+edge_fog_hybrid,sensor,0.1,32,0.5,0.000
+edge_fog_hybrid,edge_gateway,0.2,256,3.0,0.020
+edge_fog_hybrid,fog_node,0.4,512,50.5,0.150
+fog_only,sensor,0.1,32,0.5,0.000
+fog_only,fog_node,0.4,512,50.6,0.150
+cloud_only,sensor,0.1,32,0.5,0.000
+cloud_only,cloud_server,0.4,512,101.7,0.500
+intelligent_hybrid,sensor,0.1,32,0.5,0.000
+intelligent_hybrid,edge_gateway,0.3,256,3.0,0.020
+intelligent_hybrid,fog_node,0.3,256,50.5,0.150

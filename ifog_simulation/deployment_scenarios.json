@@ -1,0 +1,46 @@
+[
+  {
+    "name": "All_Edge",
+    "description": "Process everything on edge gateway",
+    "placement": {
+      "ECG_Acquisition": "ECG_Sensor",
+      "Preprocessing": "Edge_Gateway",
+      "Feature_Extraction": "Edge_Gateway",
+      "Fuzzy_Diagnosis": "Edge_Gateway",
+      "Result_Aggregation": "Edge_Gateway"
+    }
+  },
+  {
+    "name": "Edge_Fog_Hybrid",
+    "description": "Preprocessing at edge, inference at fog",
+    "placement": {
+      "ECG_Acquisition": "ECG_Sensor",
+      "Preprocessing": "Edge_Gateway",
+      "Feature_Extraction": "Fog_Node",
+      "Fuzzy_Diagnosis": "Fog_Node",
+      "Result_Aggregation": "Edge_Gateway"
+    }
+  },
+  {
+    "name": "Fog_Only",
+    "description": "All processing at fog node",
+    "placement": {
+      "ECG_Acquisition": "ECG_Sensor",
+      "Preprocessing": "Fog_Node",
+      "Feature_Extraction": "Fog_Node",
+      "Fuzzy_Diagnosis": "Fog_Node",
+      "Result_Aggregation": "Fog_Node"
+    }
+  },
+  {
+    "name": "Cloud_Only",
+    "description": "All processing in cloud",
+    "placement": {
+      "ECG_Acquisition": "ECG_Sensor",
+      "Preprocessing": "Cloud_Server",
+      "Feature_Extraction": "Cloud_Server",
+      "Fuzzy_Diagnosis": "Cloud_Server",
+      "Result_Aggregation": "Cloud_Server"
+    }
+  }
+]
