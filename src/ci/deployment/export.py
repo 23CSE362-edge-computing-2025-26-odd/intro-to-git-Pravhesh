@@ -129,7 +129,8 @@ def export_to_onnx(
     output_names: Optional[list] = None,
     dynamic_axes: Optional[Dict[str, Any]] = None,
     opset_version: int = 11,
-    device: str = 'cpu'
+    device: str = 'cpu',
+    verbose: bool = False
 ) -> str:
     """
     Export PyTorch model to ONNX format.
