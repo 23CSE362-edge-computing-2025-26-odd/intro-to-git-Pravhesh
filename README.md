@@ -211,6 +211,8 @@ ONNX Speedup: 1.00x faster than PyTorch
 ```
 
 ## Architecture
+ 
+See: [Architecture Flowcharts](docs/architecture_flowcharts.md) for complete Mermaid diagrams (pipeline, deployment, E6).
 
 ### Signal Processing Pipeline
 
