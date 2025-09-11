@@ -1,0 +1,56 @@
+# Project configuration
+
+project:
+  name: CI Medical Diagnosis MVP
+  seed: 42
+
+paths:
+  ptb_data_dir: "dataset/archive/PTB diagnostic ecg database csv files"
+  mitbih_data_dir: "dataset/mit-bih-arrhythmia-database-1.0.0"
+  processed_dir: data/processed
+  cache_dir: .cache
+
+# Temporal windowing
+window:
+  seconds: 10
+  overlap_fraction: 0.5
+  pad_mode: reflect
+
+# Spectrogram parameters (STFT)
+spectrogram:
+  n_fft: 512
+  hop_length: 128
+  win_length: 512
+  power: 2.0
+  mel_scale: false
+  n_mels: 128
+  normalize: zscore
+
+# Feature extractor
+model:
+  backbone: resnet18
+  embedding_dim: 512
+  pretrained: true
+  finetune_last_block: false
+
+# Data loading
+loader:
+  datasets: ["ptb", "mitbih"]  # Use both databases
+  ptb:
+    timestamp_column: null  # No time column, will generate from sampling rate
+    value_column: ii  # Use lead II as primary signal
+    sampling_rate_hz: 1000
+    file_glob: "**/*.csv"
+  mitbih:
+    sampling_rate_hz: 360
+    # MIT-BIH uses binary format, will need special loader
+
+# Label mapping (external YAML)
+labels:
+  mapping_file: configs/labels_pnc.yaml
+  default_class: Unknown
+
+# Runtime
+runtime:
+  num_workers: 4
+  batch_size: 32

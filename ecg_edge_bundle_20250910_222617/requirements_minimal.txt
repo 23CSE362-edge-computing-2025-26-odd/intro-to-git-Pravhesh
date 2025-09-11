@@ -1,9 +1,0 @@
-# Minimal requirements for edge deployment
-torch>=1.9.0
-torchvision>=0.10.0
-librosa>=0.8.0
-numpy>=1.19.0
-scipy>=1.7.0
-onnx>=1.10.0
-onnxruntime>=1.8.0
-psutil>=5.8.0

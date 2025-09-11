@@ -1,6 +1,6 @@
 Scenario,Description,Model Type,Latency (ms),Cost ($/hour),Power (W),Accuracy Factor,Throughput (req/min),Feasible
-all_edge,All processing on edge gateway,onnx,183.7,0.020,3.7,1.049,6.0,True
-edge_fog_hybrid,"Preprocessing at edge, inference at fog",pytorch,143.7,0.170,54.1,1.050,6.0,True
-fog_only,All processing at fog node,pytorch,57.1,0.150,51.1,1.050,6.0,True
-cloud_only,All processing in cloud,pytorch,57.1,0.500,102.2,1.050,6.0,True
-intelligent_hybrid,Optimal task placement,onnx,150.6,0.170,54.1,1.049,6.0,True
+all_edge,All processing on edge gateway,onnx,183.7,0.02,3.7,1.049,6,TRUE
+edge_fog_hybrid,"Preprocessing at edge, inference at fog",pytorch,143.7,0.17,54.1,1.05,6,TRUE
+fog_only,All processing at fog node,pytorch,57.1,0.15,51.1,1.05,6,TRUE
+cloud_only,All processing in cloud,pytorch,57.1,0.5,102.2,1.05,6,TRUE
+intelligent_hybrid,Optimal task placement,onnx,150.6,0.17,54.1,1.049,6,TRUE
