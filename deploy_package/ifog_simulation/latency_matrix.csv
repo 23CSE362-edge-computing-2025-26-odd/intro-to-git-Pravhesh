@@ -1,0 +1,7 @@
+Source,Destination,Latency_ms,Bandwidth_Mbps
+ECG_Sensor,Edge_Gateway,5.0,1.0
+Edge_Gateway,Fog_Node,20.0,10.0
+Fog_Node,Cloud_Server,50.0,100.0
+ECG_Sensor,Fog_Node,25.0,1.0
+ECG_Sensor,Cloud_Server,100.0,1.0
+Edge_Gateway,Cloud_Server,70.0,10.0

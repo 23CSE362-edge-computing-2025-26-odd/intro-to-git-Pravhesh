@@ -1,0 +1,32 @@
+[
+  {
+    "name": "ECG_Acquisition",
+    "ram": 32,
+    "mips": 5000,
+    "instances": 1
+  },
+  {
+    "name": "Preprocessing",
+    "ram": 256,
+    "mips": 20000,
+    "instances": 1
+  },
+  {
+    "name": "Feature_Extraction",
+    "ram": 512,
+    "mips": 137447,
+    "instances": 1
+  },
+  {
+    "name": "Fuzzy_Diagnosis",
+    "ram": 64,
+    "mips": 4900,
+    "instances": 1
+  },
+  {
+    "name": "Result_Aggregation",
+    "ram": 32,
+    "mips": 2000,
+    "instances": 1
+  }
+]

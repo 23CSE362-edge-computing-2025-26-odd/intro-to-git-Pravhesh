@@ -1,0 +1,38 @@
+[
+  {
+    "source": "ECG_Sensor",
+    "destination": "Edge_Gateway",
+    "latency": 5.0,
+    "bandwidth": 1.0
+  },
+  {
+    "source": "Edge_Gateway",
+    "destination": "Fog_Node",
+    "latency": 20.0,
+    "bandwidth": 10.0
+  },
+  {
+    "source": "Fog_Node",
+    "destination": "Cloud_Server",
+    "latency": 50.0,
+    "bandwidth": 100.0
+  },
+  {
+    "source": "ECG_Sensor",
+    "destination": "Fog_Node",
+    "latency": 25.0,
+    "bandwidth": 1.0
+  },
+  {
+    "source": "ECG_Sensor",
+    "destination": "Cloud_Server",
+    "latency": 100.0,
+    "bandwidth": 1.0
+  },
+  {
+    "source": "Edge_Gateway",
+    "destination": "Cloud_Server",
+    "latency": 70.0,
+    "bandwidth": 10.0
+  }
+]
