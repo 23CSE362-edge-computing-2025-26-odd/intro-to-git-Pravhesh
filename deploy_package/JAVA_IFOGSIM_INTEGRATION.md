@@ -331,7 +331,7 @@ public class ECGMetrics {
 
 ## Deployment Instructions
 
-### 1. For your colleague (iFogSim developer):
+### 1. For iFogSim developer:
 
 ```bash
 # Get the ECG bundle
@@ -385,13 +385,3 @@ public class ECGIntegrationTest {
     }
 }
 ```
-
-## What to Send to Your Colleague
-
-Send them:
-1. **The ZIP file**: `dist/ecg_edge_bundle_20250910_222617.zip` (50MB)
-2. **REST API wrapper**: `scripts/rest_api_wrapper.py`
-3. **This integration guide**: `docs/JAVA_IFOGSIM_INTEGRATION.md`
-4. **iFogSim configurations**: Files from `ifog_simulation/` folder
-
-The bundle is completely self-contained and ready for edge deployment! 🚀
